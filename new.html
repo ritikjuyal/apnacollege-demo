@@ -1,0 +1,258 @@
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	</head>
+	<style>
+		#find_the_key:hover,#become:hover,.learning:hover,.instruments:hover,#showscale:hover{
+			color:blue;
+		}
+		.auto_scale{
+			height:600px;
+			width:400px;
+			box-shadow:2px 2px 10px 2px;
+		}
+		.auto_scale1{
+			font-size:30px;
+			position:absolute;
+			top:10px;
+		}
+		#possible_scale{
+			position:absolute;
+			top:60px;
+			left:125px;
+		}
+		#possible_scale121{
+			position:absolute;
+			top:85px;
+			left:125px;
+		}
+		#possible_scale1{
+			position:absolute;
+			top:110px;
+			left:125px;
+		}
+		#possible_scale2{
+			position:absolute;
+			top:135px;
+			left:125px;
+		}
+		#possible_scale12{
+			position:absolute;
+			top:160px;
+			left:125px;
+		}
+		#possible_scale123{
+			position:absolute;
+			top:185px;
+			left:125px;
+		}
+		#possible_scale1234{
+			position:absolute;
+			top:210px;
+			left:125px;
+		}
+		.reset{
+			position:absolute;
+			top:300px;
+			left:125px;
+			font-size:15px;
+			color:green;
+			border:1px solid green;
+			height:40px;
+			width:125px;
+			padding-top:10px;
+			padding-left:40px;
+		}
+		.content{
+			position:absolute;
+			top:620px;
+			left:120px;
+			height:740px;
+			width:1110px;
+			box-shadow:2px 2px 10px 2px;
+		}
+		.find_the_music{
+			font-size:39.5px;
+			position:absolute;
+			top:20px;
+			left:30px;
+		}
+		#find_the_key{
+			font-size:32px;
+			color:skyblue;
+			position:absolute;
+			top:80px;
+			left:30px;
+		}
+		.find_the_key1{
+			font-size:16px;
+			position:absolute;
+			top:130px;
+			left:30px;
+		}
+		#become{
+			font-size:32px;
+			color:skyblue;
+			position:absolute;
+			top:190px;
+			left:30px;
+		}
+		#whether{
+			font-size:16px;
+			position:absolute;
+			top:240px;
+			left:30px;
+		}
+		.learning{
+			font-size:32px;
+			color:skyblue;
+			position:absolute;
+			top:330px;
+			left:30px;
+		}
+		.whether1{
+			font-size:16px;
+			position:absolute;
+			top:380px;
+			left:30px;
+		}
+		.instruments{
+			font-size:32px;
+			color:skyblue;
+			position:absolute;
+			top:443px;
+			left:30px;
+		}
+		.playing{
+			font-size:16px;
+			position:absolute;
+			top:493px;
+			left:30px;
+		}
+		#showscale{
+			font-size:32px;
+			color:skyblue;
+			position:absolute;
+			top:580px;
+			left:30px;
+		}
+		.the_ultimate{
+			font-size:16px;
+			position:absolute;
+			top:630px;
+			left:30px;
+		}
+		.next_multimedia{
+			font-size:12.85px;
+			position:absolute;
+			top:1383px;
+			left:392px;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 auto_scale">
+					<h1 class="auto_scale1">Auto Scale</h1>
+					<form>
+						<select id="possible_scale">
+							<option value="B">B</option>
+							<option value="A Major">A Major</option>
+							<option value="B Major">B Major</option>
+							<option value="C Major">C Major</option>
+							<option value="D Major">D Major</option>
+							<option value="E Major">E Major</option>
+							<option value="G Major">G Major</option>
+							<option value="F# (Gb) Major">F# (Gb) Major</option>
+							<option value="A Minor">A Minor</option>
+							<option value="B Minor">B Minor</option>
+							<option value="E Minor">E Minor</option>
+							<option value="C# (Db) Minor">C# (Db) Minor</option>
+							<option value="D# (Eb) Minor">D# (Eb) Minor</option>
+							<option value="F# (Gb) Minor">F# (Gb) Minor</option>
+							<option value="G# (Ab) Minor">G# (Ab) Minor</option>
+						</select>
+						<select id="possible_scale121">
+							<option value="A">A</option>
+							<option value="A Major">A Major</option>
+							<option value="C Major">C Major</option>
+							<option value="D Major">D Major</option>
+							<option value="E Major">E Major</option>
+							<option value="F Major">F Major</option>
+							<option value="G Major">G Major</option>
+							<option value="A# (Bb) Major">A# (Bb) Major</option>
+							<option value="A Minor">A Minor</option>
+							<option value="B Minor">B Minor</option>
+							<option value="D Minor">D Minor</option>
+							<option value="E Minor">E Minor</option>
+							<option value="G Minor">G Minor</option>
+							<option value="C# (Db) Minor">C# (Db) Minor</option>
+							<option value="F# (Gb) Minor">F# (Gb) Minor</option>
+						</select>
+						<select id="possible_scale1">
+							<option value="G">G</option>
+							<option value="C Major">C Major</option>
+							<option value="D Major">D Major</option>
+							<option value="F Major">F Major</option>
+							<option value="G Major">G Major</option>
+							<option value="A# (Bb) Major">A# (Bb) Major</option>
+							<option value="A Minor">A Minor</option>
+							<option value="B Minor">B Minor</option>
+							<option value="D Minor">D Minor</option>
+							<option value="E Minor">E Minor</option>
+							<option value="G Minor">G Minor</option>
+						</select>
+						<select id="possible_scale2">
+							<option value="F">F</option>
+							<option value="C Major">C Major</option>
+							<option value="F Major">F Major</option>
+							<option value="A# (Bb) Major">A# (Bb) Major</option>
+							<option value="A Minor">A Minor</option>
+							<option value="D Minor">D Minor</option>
+							<option value="G Minor">G Minor</option>
+						</select>
+						<select id="possible_scale12">
+							<option value="E">E</option>
+							<option value="C Major">C Major</option>
+							<option value="F Major">F Major</option>
+							<option value="A Minor">A Minor</option>
+							<option value="D Minor">D Minor</option>
+						</select>
+						<select id="possible_scale123">
+							<option value="D">D</option>
+							<option value="C Major">C Major</option>
+							<option value="F Major">F Major</option>
+							<option value="A Minor">A Minor</option>
+							<option value="D Minor">D Minor</option>
+						</select>
+						<select id="possible_scale1234">
+							<option value="C">C</option>
+							<option value="C Major">C Major</option>
+							<option value="F Major">F Major</option>
+							<option value="A Minor">A Minor</option>
+							<option value="D Minor">D Minor</option>
+						</select>
+					</form>
+					<h1 class="reset">Reset</h1>
+					<div class="col-md-12 content">
+						<h2 class="find_the_music">Find the music key and more...</h2>
+						<h2 id="find_the_key">Find the key of a song</h2>
+						<p class="find_the_key1">Find the key of a song with ShowScale.com, easy! Just select the notes of the melody on our piano-roll and you are done! You can check out the<br>tutorial, it will show you how to do this in seconds. Tutorial: Find the key of a song, the easy way!</p>
+						<h2 id="become">Become a Music Producer in 7 Steps</h2>
+						<p id="whether">Whether you have always had a passion for music or if you are simply looking for a career path that is more creative and flexible, working as a music<br>producer may be a step in the right direction for you professionally. When you are thinking of becoming a professional music producer, doing so is <br>possible [...]</p>
+						<h2 class="learning">Learning Music, How to Start?</h2>
+						<p class="whether1">Whether you’re looking to keep your mind active and healthy as you age, get a new skill that can help you earn some cash or just have fun, learning<br>how to play an instrument is a fulfilling way to spend your time. Learning Music, Start Your Musical Venture While there are many ways to learn […]</p>
+						<h2 class="instruments">4 Instruments for Beginners</h2>
+						<p class="playing">Playing a musical instrument is a fun hobby to pick up, and it can even serve as a medium for stress relief and self expression. There’s no denying<br>that certain instruments are more suitable for beginners than others. For example, you never hear about a newbie starting out on a double neck<br>guitar. These are […]</p>
+						<h2 id="showscale">ShowScale.com online!</h2>
+						<p class="the_ultimate">The ultimate free music scale tool I proudly present: ShowScale.com, the ultimate (free) tool to help you find the music scale or key you are working<br>in. With a few clicks on the notes you are playing the tool will determine what scale(s) fits your song. No music theory is required for using this tool.<br>[…]</p>
+					</div>
+					<p class="next_multimedia">©2013-2022<span style="color:blue;"> Next Multimedia</span> - KvK: 60919604 - <span style="color:blue;">Terms & Conditions</span> -<span style="color:blue;"> Privacy Policy</span> -<span style="color:blue;"> Cookie Policy</span></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
