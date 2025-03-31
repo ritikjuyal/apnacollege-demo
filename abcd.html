@@ -1,6 +1,121 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
+		<style>
+			body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: green;
+    text-align: center;
+    color: #fff;
+    padding: 0.1px;
+}
+header a{
+    border-radius: 40px;
+    background-color: #fff;
+    padding: 10px;
+    color: green;
+}
+#header{
+    text-align: center;
+    grid-area: header;
+}
+.header{
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.links{
+    display: grid;
+    column-gap: 30px;
+}
+.container{
+    display: grid;
+    text-align: center;
+    background-color: #00f;
+    padding: 10px;
+    gap: 10px;
+    animation: change 3s ease 2s infinite;
+    grid-template-areas: 'header header header' 
+    'main sidebar sidebar' 
+    'footer footer footer';
+}
+@keyframes change{
+    0%{grid-template-areas: 'header header header' 'main sidebar sidebar' 'footer footer footer';}
+    50%{grid-template-areas: 'main sidebar sidebar' 'footer footer footer' 'header header header';}
+    100%{grid-template-areas: 'footer footer footer' 'header header header' 'main sidebar sidebar';}
+}
+.container h1{
+    background-color: #fff;
+    font-size: 30px;
+    padding: 20px;
+}
+.main{
+    grid-area: main;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.footer{
+    grid-area: footer;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid gray;
+}
+th,td{
+    border: 1px solid gray;
+}
+td[rowspan='3'],td[rowspan='4']{
+    text-align: center;
+    padding: 20px;
+}
+td{
+    height: 60px;
+}
+a{
+    color: #00f;
+}
+.item-container,.container-item,.items,.area{
+    display: grid;
+    background-color: #00f;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.item-container h1,.container-item h1,.items h1,.area h1{
+    background-color: #fff;
+    padding: 20px;
+}
+.item-container{
+    grid-template-columns: 80px 50px 70px 50px;
+}
+.container-item{
+    grid-template-columns: 80px 100px auto 60px;
+    animation: color 3s ease 2s infinite;
+}
+@keyframes color{
+    0%{grid-template-columns: 80px 100px auto 60px;}
+    100%{grid-template-columns: 100px 200px auto 150px;}
+}
+.items,.area{
+    display: grid;
+}
+.one{
+    grid-area: item;
+}
+.item-one{
+    grid-area: item;
+}
+.items{
+    grid-template-areas: 'item item . . .';
+}
+.area{
+    grid-template-areas: 'item item . . .' 'item item . . .';
+}
+		</style>
 		<!--Include the above in your head tag-->
 	</head>
 	<body>

@@ -1,0 +1,94 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header{
+    display: flex;
+    flex-direction: column;
+}
+#header h1{
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+}
+#header p{
+    color: rgb(100, 100, 100);
+}
+.arrow{
+    margin: 40px 0;
+}
+.arrow a{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+.about{
+    padding: 10px;
+    box-shadow: 0 2px 4px #000;
+    border-radius: 7px;
+}
+.arrow a,.about{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.app{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 10% 0 0 0;
+    background-color: #f00;
+    color: #fff;
+}
+label{
+    margin: 20px 0;
+}
+select,button{
+    border-radius: 40px;
+    background-color: #fff;
+    margin: 0px 0px 20px 0px;
+    padding: 20px;
+}
+.apps{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30.5% 10% 30.5%;
+    justify-content: space-between;
+    align-items: center;
+}
+.apps img{
+    margin: 90px 0 0 0;
+    height: 250px;
+    width: 100%;
+    border-radius: 7px;
+}
+.apps .text{
+    box-shadow: 0 2px 4px #000;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+}
+.text h1{
+    text-align: center;
+}
+.method{
+    display: inline;
+    position: absolute;
+    right: 10px;
+    background-color: #f00;
+    color: #fff;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(100, 100, 100);
+}

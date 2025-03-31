@@ -59,7 +59,7 @@ a u{
     column-gap: 20px;
     margin: 0px 0px 10px 0px;
 }
-#data img[src='image/as.webp'],#data img[src='image/qwt.webp'],#data img[src='image/ds.webp']{
+#data img[src='as.webp'],#data img[src='qwt.webp'],#data img[src='ds.webp']{
     width: 40px;
 }
 #columns img{
@@ -101,7 +101,7 @@ a[href="details.html"]{
     display: flex;
     justify-content: space-between;
 }
-img[src='image/ar.webp']{
+img[src='ar.webp']{
     transform: translate(-40%);
 }
 .content select{
@@ -171,7 +171,7 @@ header .links a:hover{
     50%{background-image: url('https://img.weddingbazaar.com/shaadisaga_production/photos/pictures/004/018/717/new_large/1654255310557.jpg');}
     100%{background-image: url('https://img.weddingbazaar.com/shaadisaga_production/photos/pictures/004/018/724/new_large/61a86e80-b5f0-4df4-9b0e-dc870dfa284d.jpg');}
 }
-img[src='image/pn.png']{
+img[src='pn.png']{
     width: 95%;
 }
 a[href='pro.html']{
@@ -220,7 +220,7 @@ main,footer{
 #aside{
     padding: 20px 20%;
 }
-img[src='image/sdf.png']{
+img[src='sdf.png']{
     width: 80%;
 }
 .frequently{
