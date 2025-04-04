@@ -35,6 +35,8 @@ a{
     text-decoration: none;
 }
 .header{
+    font-size: 15px;
+    padding: 20px 25px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 4px #000;
@@ -44,7 +46,7 @@ a{
     display: grid;
     align-items: center;
     justify-content: center;
-    margin: 5% 0 0 0;
+    margin: 0 0 0 0;
     background-color: #f00;
     color: #fff;
 }
@@ -97,6 +99,6 @@ select,button{
     font-size: 20px;
 }
 img[src='bmw.png']{
-    height: 1200px;
-    margin: 40px 20%;
+    height: 400px;
+    margin: 0 20% 20px 20%;
 }
