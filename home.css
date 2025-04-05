@@ -35,6 +35,8 @@ a{
     text-decoration: none;
 }
 .header{
+    font-size: 30px;
+    padding: 5px 25px;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 4px #000;
@@ -44,7 +46,9 @@ a{
     display: grid;
     align-items: center;
     justify-content: center;
-    margin: 5% 0 0 0;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 0 25%;
     background-color: #f00;
     color: #fff;
 }
@@ -54,8 +58,8 @@ label{
 select,button{
     border-radius: 40px;
     background-color: #fff;
-    margin: 0px 0px 20px 0px;
-    padding: 20px;
+    margin: 5% 0;
+    padding: 10px;
 }
 .apps{
     position: relative;
@@ -94,9 +98,28 @@ select,button{
 }
 .find{
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+    margin: 40px 25% 50px 25%;
 }
 img[src='bmw.png']{
-    height: 1200px;
-    margin: 40px 20%;
+    height: 340px;
+    margin: 0 30%;
+}
+@media (max-width: 600px){
+    .header{
+        font-size: 20px;
+        color: #000;
+        padding: 10px 25px;
+    }
+    .app{
+        padding: 20px 0;
+        margin: 20px 0;
+    }
+    .find{
+        font-size: 20px;
+        margin: 40px 20px 50px 20px;
+    }
+    img[src='bmw.png']{
+        margin: 60px 12% 0 12%;
+    }
 }
