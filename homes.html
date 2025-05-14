@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Scholarship Finder</title>
+        <!--Include the above in your head tag-->
+    </head>
+    <body>
+        <div class="header">
+            <a href="homes.html"><b>Home</b></a>
+            <a href="about.html"><b>About Me</b></a>
+        </div>
+        <div class="main">
+            <h1 class="scholar">Scholarship Finder</h1>
+            <div class="form">
+                <label for="abc">Education Level</label>
+                <select id="abc">
+                    <option>Choose education level</option>
+                    <option>Class 8</option>
+                    <option>Class 9-10</option>
+                    <option>Class 11-12</option>
+                    <option>UG</option>
+                    <option>PG</option>
+                    <option>Ph.D</option>
+                </select>
+                <label for="abcd">Income range</label>
+                <select id="abcd">
+                    <option>Choose income</option>
+                    <option>=< 1 lakh</option>
+                    <option>=< 1.5 lakh</option>
+                    <option>=< 2 lakh</option>
+                    <option>=< 2.5 lakh</option>
+                </select>
+                <label for="xyz">Category</label>
+                <select id="xyz">
+                    <option>Choose category</option>
+                    <option>General</option>
+                    <option>OBC</option>
+                    <option>SC</option>
+                    <option>ST</option>
+                    <option>Minority</option>
+                </select>
+                <button onclick="change()">Find Scholarships</button>
+            </div>
+            <script>
+                function change(){
+                    var a=document.getElementById("abc").value.trim();
+                    var b=document.getElementById("abcd").value.trim();
+                    var c=document.getElementById("xyz").value.trim();
+                    if(a=="Choose education level" || b=="Choose income" || c=="Choose category"){
+                        alert("Please, select all the fields");
+                    }
+                    else if((a=="Class 8" || a=="Class 9-10") && b=="=< 1 lakh"){
+                        window.location.href="results.html";
+                    }
+                    else if(((a=="Class 11-12" || a=="UG" || a=="PG" || a=="Ph.D") && b=="=< 1 lakh") || ((a=="Class 9-10" || a=="Ph.D") && b=="=< 2.5 lakh") || (a=="Class 8" && b=="=< 2 lakh")){
+                        window.location.href="informations.html";
+                    }
+                    else if(a=="Class 8" && b=="=< 2.5 lakh"){
+                        window.location.href="information1.html";
+                    }
+                    else if(a=="Class 8" && b=="=< 1.5 lakh"){
+                        window.location.href="information2.html";
+                    }
+                    else if(a=="Class 9-10" && b=="=< 1.5 lakh"){
+                        window.location.href="result1.html";
+                    }
+                    else if(a=="Class 9-10" && b=="=< 2 lakh"){
+                        window.location.href="information3.html";
+                    }
+                    else if((a=="Class 11-12" || a=="UG" || a=="PG") && b=="=< 2.5 lakh"){
+                        window.location.href="result2.html";
+                    }
+                    else if(a=="Class 11-12" && (b=="<= 1.5 lakh" || b=="=< 2 lakh")){
+                        window.location.href="result4.html";
+                    }
+                    else if(a=="UG" && (b=="<= 1.5 lakh" || b=="=< 2 lakh")){
+                        window.location.href="information6.html";
+                    }
+                    else if(a=="PG" && b=="=< 1.5 lakh"){
+                        window.location.href="result5.html";
+                    }
+                    else if(a=="PG" && b=="=< 2 lakh"){
+                        window.location.href="result6.html";
+                    }
+                    else if(a=="Ph.D" && b=="=< 1.5 lakh"){
+                        window.location.href="information4.html";
+                    }
+                    else if(a=="Ph.D" && b=="=< 2 lakh"){
+                        window.location.href="information5.html";
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>
