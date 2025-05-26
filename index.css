@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: pink;
+    border-radius: 40px;
+    margin: 80px 25% 20px 25%;
+    padding: 60px;
+}
+label,a{
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+select{
+    border-radius: 40px;
+    padding: 10px 100px;
+    margin: 20px 0 0 0;
+}
+button{
+    border-radius: 40px;
+    padding: 10px 40px;
+    margin: 20px 0 0 0;
+    border: 1px solid #fff;
+    text-align: center;
+}
+h3[onclick="alert('Sex is used within our calorie calculation to determine an appropriate daily calorie goal. Gender-affirming medications may affect which sex you should select. We recommend consulting with your doctor to decide which option is best for calculating your current calorie needs.')"]{
+    color: #0ff;
+}
