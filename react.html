@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const a=54;
+            const b=34;
+            const x=60;
+            const y=a-b+x;
+            const z={
+                color:'#0f0',
+                fontSize:'12px',
+                display:'flex',
+                flexDirection:'column',
+                alignItems:'center',
+                justifyContent:'start',
+                fontFamily:'Arial'
+            }
+            function Abc(){
+                return(
+                    <>
+                    <div style={z}>
+                        <h1>Number of Medicines: {a}</h1>
+                        <h1>Medicines Sold: {b}</h1>
+                        <h1>Medicines Buy: {x}</h1>
+                        <h1>Total Medicines: {y}</h1>
+                    </div>    
+                    </>
+                );
+            }
+            ReactDOM.createRoot(document.getElementById("root")).render(<Abc />);
+        </script>
+    </body>
+</html>

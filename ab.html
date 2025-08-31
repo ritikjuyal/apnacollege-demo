@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="home.css">
+        <!--Include the above in your head tag-->
+    </head>
+    <body>
+        <div id="ab">
+            <div v-for="(i,index) in img">
+                <img v-bind:src="i.v" v-on:click="df(index)" v-bind:class="{abc:i.s}">
+            </div>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const a=Vue.createApp({
+                data(){
+                    return{
+                        img:[
+                            {v:"ad.webp",s:true},
+                            {v:"af.webp",s:false},
+                            {v:"bmw.png",s:false},
+                            {v:"inp.jpeg",s:true},
+                            {v:"ins.jpg",s:true},
+                            {v:"dsh.png",s:false}
+                        ]
+                    }
+                },
+                methods:{
+                    df(mn){
+                        this.img[mn].s=!this.img[mn].s
+                    }
+                }
+            })
+            a.mount("#ab")
+        </script>
+    </body>
+</html>
