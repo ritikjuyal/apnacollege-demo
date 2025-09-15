@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>VueJS Project</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>&lt;p&gt;</h1>
+            <button @click="this.c=!this.c">{{a}}</button>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+           const b=Vue.createApp({
+                data(){
+                    return{
+                        c:false
+                    }
+                },
+                computed:{
+                    a(){
+                        if(this.c){
+                            return "Add";
+                        }
+                        else{
+                            return "Below";
+                        }
+                    }
+                }
+            })
+            b.mount('#app');
+        </script>
+    </body>
+</html>
