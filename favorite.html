@@ -1,73 +1,73 @@
 <html>
     <head>
         <style>
-            .php{
-                display: flex;
-            }
-            #app{
-                background-color: #0f0;
-                color: #fff;
-                padding: 20px;
-                width: 200px;
-                margin: 0 20px 20px 0;
-            }
             img{
-                width: 100px;
-            }
-            #one,#two{
-                width: 200px;
-                height: 200px;
-            }
-            #one{
-                background-color:#0f0;
-                color:#fff;
-                padding: 20px;
-            }
-            #two{
-                background-color:#f00;
-                color:#00f;
-                padding: 20px;
+                width: 250px;
+                height: 250px;
             }
         </style>
         <title>VueJS Toggle Project</title>
     </head>
     <body>
-<!--        <div class="php">
-            <div id="app" v-for="y in foods">
-                <h2>{{y.foodname}} <img src="axz.png" v-show="x"></h2>
-                <p>{{y.fooddemo}}</p>
-                <button v-on:click.stop="abc">Change</button>
-            </div>
-        </div>-->
         <div id="app">
-            <div id="one">
-                <h1>One</h1>
+            <img v-bind:src="b" v-on:click="d">
+            <div id="miny">
+                <h1>MINY</h1>
+                <button v-on:click="x($event,5)">+5</button>
+                <button v-on:click="x($event,1)">+1</button>
+                <button v-on:click="x($event,-5)">-5</button>
             </div>
-            <div id="two">
-                <h1>Two</h1>               
+            <div id="tsk">
+                <h1>TSK</h1>
+                <button v-on:click="x($event,5)">+5</button>
+                <button v-on:click="x($event,1)">+1</button>
+                <button v-on:click="x($event,-5)">-5</button>                
             </div>
+            <div id="sfu">
+                <h1>SFU</h1>
+                <button v-on:click="x($event,5)">+5</button>
+                <button v-on:click="x($event,1)">+1</button>
+                <button v-on:click="x($event,-5)">-5</button>                
+            </div>
+            <ul>
+                <li>MINY:{{miny}}</li>
+                <li>TSK:{{tsk}}</li>
+                <li>SFU:{{sfu}}</li>
+            </ul>
         </div>
-        <button @click="x=!x">Remove</button>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script>
             const a=Vue.createApp({
                 data(){
                     return{
-                        x:true
+                        a:0,
+                        b:'asg.jpg',
+                        c:['asg.jpg','asm.jpg','axz.png'],
+                        miny:0,
+                        tsk:0,
+                        sfu:0
                     };
                 },
                 methods:{
-                    abc(){
-                        let y={
-                            foodname:this.foodname,
-                            fooddemo:this.fooddemo
+                    d(){
+                        this.a++;
+                        if(this.a>=3){
+                            this.a=0;
                         }
-                        this.x=!this.x
+                        this.b=this.c[this.a];
+                    },
+                    x(d,n){
+                        if(d.target.parentElement.id=="miny"){
+                            this.miny+=n;
+                        }
+                        else if(d.target.parentElement.id=="tsk"){
+                            this.tsk+=n;
+                        }
+                        else{
+                            this.sfu+=n;
+                        }
                     }
-/*                    remove(){
-                        this.foods.splice(1,1);
-                    }
-*/                }
+                }
             })
             a.mount('#app');
         </script>
