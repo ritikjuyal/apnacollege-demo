@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <style>
+            #abc{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                height: 100%;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: start;
+                background-color: #f00;
+                height: 250px;
+                padding: 30px;
+                border-radius: 40px;
+            }
+            button{
+                background-color: #ff0;
+                color: #fff;
+                border-radius: 40px;
+                margin: 20px 0 20px 50px;
+                padding: 10px;
+            }
+            table{
+                border-collapse: collapse;
+                width: 40%;
+            }
+            th,td{
+                border: 1px solid #000;
+                text-align: center;
+            }
+            tr:nth-child(odd){
+                background-color: #f00;
+                color:#fff;
+            }
+            tr:nth-child(even){
+                background-color: #ff0;
+                color:#f00;
+            }
+            img{
+                width: 100px;
+                height: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="abc">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                    <th>Contact Number</th>
+                    <th>Gender</th>
+                </tr>
+                <tr v-for="b in x">
+                    <td>{{b.y}}</td>
+                    <td>{{b.z}}</td>
+                    <td>{{b.l}}</td>
+                    <td>{{b.k}}</td>
+                </tr>
+            </table>
+            <form v-on:submit.prevent="database">
+                <label>Name:</label>
+                <input type="text" placeholder="Enter your name" v-model="name">
+                <label>Email ID:</label>
+                <input type="text" placeholder="Enter your email address" v-model="email">
+                <label>Contact No.:</label>
+                <input type="text" placeholder="Enter your contact number" v-model="contact">
+                <label>Gender:</label>
+                <input type="radio" value="Male" v-model="gender">
+                <label>Male</label>
+                <input type="radio" value="Female" v-model="gender">
+                <label>Female</label>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const a=Vue.createApp({
+                data(){
+                    return{
+                        name:null,
+                        email:null,
+                        contact:null,
+                        gender:null,
+                        x:[]
+                    }
+                },
+                methods:{
+                    database(){
+                        let b={
+                            y:this.name,
+                            z:this.email,
+                            l:this.contact,
+                            k:this.gender,
+                        }
+                        this.x.push(b)
+                        this.name=null
+                        this.email=null
+                        this.contact=null
+                        this.gender=null
+                    }
+                }
+            })
+            a.mount('#abc')
+        </script>
+    </body>    
+</html>
