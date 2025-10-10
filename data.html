@@ -1,5 +1,8 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
             #abc{
                 display: flex;
@@ -48,6 +51,7 @@
         </style>
     </head>
     <body>
+        <input class="form-control" type="text" id="field" placeholder="Search..">
         <div id="abc">
             <table>
                 <tr>
@@ -56,13 +60,26 @@
                     <th>Contact Number</th>
                     <th>Gender</th>
                 </tr>
+            <tbody id="task">
                 <tr v-for="b in x">
                     <td>{{b.y}}</td>
                     <td>{{b.z}}</td>
                     <td>{{b.l}}</td>
                     <td>{{b.k}}</td>
                 </tr>
+            </tbody>    
             </table>
+            <script>
+                $(document).ready(function(){
+                    $("#field").on("keyup",function(){
+                        var a=$(this).val().toLowerCase();
+                        $("#task tr").filter(function(){
+                            $(this).toggle($(this).text().toLowerCase().indexOf(a)>-1)
+                        })
+                    })
+                }
+                )
+            </script>
             <form v-on:submit.prevent="database">
                 <label>Name:</label>
                 <input type="text" placeholder="Enter your name" v-model="name">
