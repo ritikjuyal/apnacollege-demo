@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <title>Figma</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const a={
+                backgroundImage:'url("https//:0b7f96b5d3eda66774000fe7b8444bce896e7406.png")'
+            }
+            const c={
+                display:'grid',
+                gap:'50px 30px',
+                gridTemplateColumns:'300px 300px 300px 300px'
+            }
+            const d={
+                backgroundColor:'rgb(100,100,100)',
+                padding:'30px'
+            }
+            const e={
+                backgroundColor:'#fff'
+            }
+            function Ab(){
+                return(
+                    <>
+                        <div style={d}>
+                            <div style={c}>
+                                <div style={a}>
+                                    <h1>Viorra</h1>
+                                </div>
+                                <div style={e}>
+                                    <h1>Email Address</h1>
+                                </div>
+                                <div>
+                                    <h1>Full Name</h1>
+                                </div>
+                                <div>
+                                    <h1>Address</h1>
+                                </div>
+                                <div>
+                                    <h1>Best Products</h1>
+                                </div>
+                                <div>
+                                    <h1>Mobile Number</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </>
+                );
+            }
+            ReactDOM.createRoot(document.getElementById('root')).render(<Ab />);
+        </script>
+    </body>
+</html>

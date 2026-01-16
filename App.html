@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            import React from 'react'
+            import {StyleSheet,View,Text} from 'react-native'
+            import Ab from './Ab'
+            export default class App extends React.Component{
+                a={
+                    b:'Hello world!'
+                }
+                render(){
+                    return(
+                        <View>
+                            <Ab b={this.a.b} />
+                        </View>
+                    );
+                }
+            }
+        </script>
+    </body>
+</html>
