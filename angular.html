@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            .valid{
+                color: #ff0;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <form v-on:submit.prevent="mn">
+                <input type="text" id="abc" v-model="asdf">
+                <p v-bind:class="my"><code>{{xyz}}</code></p>
+                <input type="password" id="abcd">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const app=Vue.createApp({
+                data(){
+                    return{
+                        lg:'',                        
+                        xyz:"",
+                        my:'valid'
+                    }
+                },
+                methods:{
+                    lg(a,b){
+                        if(a="situ1234" && b=="@sons"){
+                            window.location.href="chart.html"
+                        }
+                        else if(a==""){
+                            this.xyz="asdf";
+                            this.my='valid'
+                        }
+                        else{
+                            alert('Login Successfully!')
+                        }
+                    }
+                }
+            })            
+            app.mount('#app')
+        </script>    
+    </body>
+</html>
