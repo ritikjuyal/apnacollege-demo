@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Change</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#app").css({"display":"flex","flex-wrap":"wrap"});
+                $("img").css({"width":"195px","height":"195px","display":"block","margin":"20px 20px 20px 0"});
+                $("button").css({"margin":"0 10px 0 0"});
+            })
+        </script>
+    </head>
+    <body>
+       <div id="app">
+  <div id="india">
+    <img src="asx.png">
+    <button v-on:click="change($event,1)">+1</button>
+    <button v-on:click="change($event,5)">+5</button>
+    <button v-on:click="change($event,-1)">-1</button>
+    <button v-on:click="change($event,4)">+4</button>
+    <button v-on:click="change($event,6)">+6</button>
+  </div>
+  <div id="srilanka">
+    <img src="sdf.png">
+    <button v-on:click="change($event,1)">+1</button>
+    <button v-on:click="change($event,5)">+5</button>
+    <button v-on:click="change($event,-1)">-1</button>
+    <button v-on:click="change($event,4)">+4</button>
+    <button v-on:click="change($event,6)">+6</button>
+  </div>
+  <div id="pakistan">
+    <img src="dsf.png">
+    <button v-on:click="change($event,1)">+1</button>
+    <button v-on:click="change($event,5)">+5</button>
+    <button v-on:click="change($event,-1)">-1</button>
+    <button v-on:click="change($event,4)">+4</button>
+    <button v-on:click="change($event,6)">+6</button>
+  </div>
+  <ul>
+    <li>India: {{ india }}</li>
+    <li>Sri Lanka: {{ srilanka }}</li>
+    <li>Pakistan: {{ pakistan }}</li>
+  </ul>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        india: 0,
+        srilanka: 0,
+        pakistan: 0
+      }
+    },
+    methods: {
+      change(e,number) {
+        if(e.target.parentElement.id==="india"){
+          this.india+=number;
+        }
+        else if(e.target.parentElement.id==="srilanka"){
+          this.srilanka+=number;
+        }
+        else{
+          this.pakistan+=number;
+        }
+      }
+    }
+  })
+ app.mount('#app')
+</script>
+    </body>
+</html>
