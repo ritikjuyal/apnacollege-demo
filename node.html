@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>ng-class-odd Directive</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+   <style>
+        .index {
+            color: yellow;
+            background-color: green;
+        }
+        .indexo {
+            color: #fff;
+            background-color: #f00;
+        }
+    </style>
+</head>
+
+<body ng-app="app" style="padding:20px">
+    <h1 style="color:green">GeeksforGeeks</h1>
+    <h2>ng-class-odd Directive</h2>
+
+    <div ng-controller="geek">
+        <table>
+            <thead>
+                <tr ng-repeat="i in sort">
+                    <td ng-class-even="'indexo'">
+                        {{i.name}}
+                    </td>
+                    <td ng-class-odd="'index'">
+                        {{i.name}}
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script>
+        var app = angular.module("app", []);
+        app.controller('geek', ['$scope', function ($scope) {
+            $scope.sort = [
+                { name: "Merge sort" },
+                { name: "Quick sort" },
+                { name: "Insertion sort" },
+                { name: "Bubble sort" }
+            ];
+        }]);
+    </script>
+</body>
+
+</html>
