@@ -1,6 +1,6 @@
-body{
+/*body{
     font-family: Arial, Helvetica, sans-serif;
-}
+}*/
             #ab{
                 border: 1px solid gray;
                 display: flex;
@@ -12,18 +12,11 @@ body{
                 width: 100px;
                 height: 100px;
             }
-            #ab img:hover{
-                background-color: #0f0;
-            }
             .abc{
-                background-color: #f00;
+                background-color: #ff0;
                 border: 1px solid #00f;
             }
-#header{
-    display: flex;
-    flex-direction: column;
-}
-#header h1{
+/*#header h1{
     text-align: center;
     border-bottom: 1px solid gray;
     margin: 0 0 20px 0;
@@ -51,24 +44,6 @@ body{
 a{
     color: rgb(100, 100, 100);
     text-decoration: none;
-}
-.header{
-    font-size: 30px;
-    padding: 5px 25px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 4px #000;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.app{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 40px;
-    margin: 0 25%;
-    background-color: #f00;
-    color: #fff;
 }
 label{
     margin: 20px 0;
@@ -122,7 +97,7 @@ select,button{
 img[src='bmw.png']{
     height: 340px;
     margin: 0 30%;
-}
+}*/
 @media (max-width: 600px){
     .header{
         font-size: 20px;

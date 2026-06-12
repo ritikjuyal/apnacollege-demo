@@ -1,18 +1,32 @@
 <html>
     <head>
         <link rel="stylesheet" href="home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("div").css({"display":"flex","flex-direction":"column"});
+                $("header").css({"font-size":"30px","padding":"5px 25px","display":"flex","justify-content":"space-between","box-shadow":"0 2px 4px #000","font-family":"Arial,Helvetica,sans-serif"});
+                $("a").css({"color":"rgb(100,100,100)","text-decoration":"none"});
+                $("body").css("font-family","Arial,Helvetica,sans-serif");
+                $("div").find("div").css({"display":"grid","align-items":"center","justify-content":"center","margin":"0 25%","padding":"10px","border-radius":"40px","color":"#fff","background-color":"#f00"});
+                $("h4").css({"text-align":"center","font-size":"25px","margin":"40px 25% 50px 25%"});
+                $("label").css("margin","20px 0");
+                $("label").siblings().css({"border-radius":"40px","background-color":"#fff","margin":"5% 0","padding":"10px"});
+                $("img").css({"height":"340px","margin":"0 30%"});
+            });
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Free Professional Course Finder</title>
         <!--Include the above in your head tag-->
     </head>
     <body>
-        <div id="header">
-            <div class="header">
-                <a href="home.html"><b>Home</b></a>
-                <a href="about.html"><b>About Me</b></a>
-            </div>
-            <h4 class="find">Find Best & Free Courses on many job oriented topics by Industry Experts</h4>
-            <div class="app">
+        <div>
+        <header>
+            <a href="home.html"><b>Home</b></a>
+            <a href="about.html"><b>About Me</b></a>
+        </header>
+           <h4>Find Best & Free Courses on many job oriented topics by Industry Experts</h4>
+            <div>
             <label for="field">Select Category:</label>
             <select id="field">
                 <option>Information Technology</option>
@@ -20,53 +34,51 @@
                 <option>Healthcare & Wellness</option>
                 <option>Arts & Humanities</option>
                 <option>Environmental Studies</option>
-            </select>
-        
+            </select>       
             <select id="abcd">
                 <option>Free</option>
                 <option>Paid</option>
             </select>
-            <button onclick="change()" id="xyz">Find Courses</button>
-            <script>
-                function change() {
-                    var field = document.getElementById("field").value.trim();
+            <button onclick="change()">Find Courses</button>
+        <script>
+            function change() {
+                var field = document.getElementById("field").value.trim();
         
-                    var abcd = document.getElementById("abcd").value.trim();
+                var abcd = document.getElementById("abcd").value.trim();
         
-                    if (field === "Information Technology" && abcd === "Free") {
-                        window.location.href="informationfree.html";
-                    }
-                    else if (field === "Information Technology" && abcd === "Paid") {
-                        window.location.href="information.html";
-                    }
-                    else if (field === "Business & Entrepreneurship" && abcd === "Free") {
-                        window.location.href="businessfree.html";
-                    }
-                    else if (field === "Business & Entrepreneurship" && abcd === "Paid") {
-                        window.location.href="business.html";
-                    }
-                    else if (field === "Healthcare & Wellness" && abcd === "Free") {
-                        window.location.href="healthfree.html";
-                    }
-                    else if (field === "Healthcare & Wellness" && abcd === "Paid") {
-                        window.location.href="health.html";
-                    }
-                    else if (field === "Arts & Humanities" && abcd === "Free") {
-                        window.location.href="artfree.html";
-                    }
-                    else if (field === "Arts & Humanities" && abcd === "Paid") {
-                        window.location.href="art.html";
-                    }
-                    else if (field === "Environmental Studies" && abcd === "Free") {
-                        window.location.href="environmentfree.html";
-                    }
-                    else {
-                        window.location.href="environment.html";
-                    }
+                if (field === "Information Technology" && abcd === "Free") {
+                    window.location.href="informationfree.html";
                 }
-            </script>
-            </div>    
-            <img src="bmw.png">
+                else if (field === "Information Technology" && abcd === "Paid") {
+                    window.location.href="information.html";
+                }
+                else if (field === "Business & Entrepreneurship" && abcd === "Free") {
+                    window.location.href="businessfree.html";
+                }
+                else if (field === "Business & Entrepreneurship" && abcd === "Paid") {
+                    window.location.href="business.html";
+                }
+                else if (field === "Healthcare & Wellness" && abcd === "Free") {
+                    window.location.href="healthfree.html";
+                }
+                else if (field === "Healthcare & Wellness" && abcd === "Paid") {
+                    window.location.href="health.html";
+                }
+                else if (field === "Arts & Humanities" && abcd === "Free") {
+                    window.location.href="artfree.html";
+                }
+                else if (field === "Arts & Humanities" && abcd === "Paid") {
+                    window.location.href="art.html";
+                }
+                else if (field === "Environmental Studies" && abcd === "Free") {
+                    window.location.href="environmentfree.html";
+                }
+                else {
+                    window.location.href="environment.html";
+                }
+            }
+        </script>
         </div>
+        <img src="bmw.png">
 </body>
 </html>
