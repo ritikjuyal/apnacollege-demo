@@ -9,11 +9,11 @@
                 $("div").eq(0).css({"font-size":"30px","padding":"5px 25px","display":"flex","justify-content":"space-between","box-shadow":"0 2px 4px #000"});
                 $("div").eq(1).css("margin","40px 0");
                 $("a").slice(0,2).css({"color":"rgb(100,100,100)","text-decoration":"none"});
-                $("a").eq(2).css({"color":"#fff","background-color":"#000","padding":"20px"});
+                $("a").eq(2).css({"color":"#fff","background-color":"#000","padding":"20px","text-decoration":"none"});
                 $("div").eq(2).css({"margin":"0 30.5% 10% 30.5%","position":"relative","display":"flex","flex-direction":"column","justify-content":"space-between","align-items":"center"});
                 $("img").css({"margin":"90px 0 0","height":"250px","width":"100%","border-radius":"7px"});
-                $("div h1").eq(0).css({"display":"inline","position":"absolute","right":"10px","color":"#fff","background-color":"#f00"});
-                $("div h1").eq(1).css("text-align","center");
+                $("a").prev("h1").css({"display":"inline","position":"absolute","right":"10px","color":"#fff","background-color":"#f00"});
+                $("a").next("h1").css("text-align","center");
                 $("h1").parent().css({"box-shadow":"0 2px 4px #000","border-radius":"40px","margin":"0 0 20px","padding":"10px"});
                 $("h1").siblings("div").css({"display":"flex","justify-content":"space-between","color":"rgb(100,100,100)"});
             });
@@ -28,12 +28,12 @@
                 <a href="about.html"><b>About Me</b></a>
             </div>
             <div>
-            <a href="home.html"><-</a>
+                <a href="home.html"><-</a>
             </div>
         </header>
         <div>
             <div>
-                <h1 class="method">FREE</h1>
+                <h1>FREE</h1>
                 <a href="https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science"><img src="ins.jpg"></a>
                 <h1>CS50's Intro to CS</h1>
                 <p>CS50's Introduction to Computer Science is a free online course from EDX. It covers foundational computer science concepts, including algorithms, data structures, programming languages (C, Python, SQL), web development, and computational thinking. Designed for beginners, it emphasizes problem-solving and hands-on projects to develop coding and analytical skills.</p>

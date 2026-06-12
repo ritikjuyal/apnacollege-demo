@@ -1,37 +1,39 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("body").css("font-family","Arial,Helvetica,sans-serif");
+                $("div").eq(0).css({"box-shadow":"0 2px 4px #000","padding":"20px","display":"flex","justify-content":"space-between"});
+                $("a").slice(0,2).css({"color":"rgb(100,100,100)","text-decoration":"none"});
+                $("div").nextUntil("div").css({"color":"#00f","text-align":"center"});
+                $("div").eq(1).css({"box-shadow":"0 2px 4px #000","margin":"30px 30% 20px 30%","padding":"30px","border-radius":"10px"});
+                $("h3").parent().css({"margin":"0 0 10px","padding":"10px"});
+            });
+        </script>
         <title>Scholarship Results</title>
         <!--Include the above in your head tag-->
     </head>
     <body>
-        <div class="header">
+        <div>
             <a href="homes.html"><b>Home</b></a>
             <a href="contact.html"><b>About Me</b></a>
         </div>
-        <h1 class="scholarship">Scholarship Results</h1>
-        <p class="scholarship">Here, scholarships are available for you.</p>
-        <div id="header">
-            <div id="main">
+        <h1>Scholarship Results</h1>
+        <p>Here, scholarships are available for you.</p>
+        <div>
+            <div>
                 <h3>Post-Matric Scholarship</h3>
                 <p><b>Eligibility --</b> Class 11-12, income = 2 lakh (Gen/OBC), 2.5 lakh (SC/ST), 1.5 lakh (SC/ST/Minority)</p>
                 <p><b>Profits --</b> Tuition, academic expenses, maintenance</p>
                 <p><b>income --</b> undefined</p>
                 <a href="https://scholarship.up.gov.in/"><b>Apply now.</b></a>
             </div>
-            <div id="main">
+            <div>
                 <h3>Dashmottar Scholarship</h3>
                 <p><b>Eligibility --</b> UG, PG, Ph.D, income = 1.5 lakh (Gen/OBC), 2 lakh (SC/ST)</p>
                 <p><b>Profits --</b> Academic fees, living expenses</p>
-                <p><b>income --</b> undefined</p>
-                <a href="https://scholarship.up.gov.in/"><b>Apply now.</b></a>
-            </div>
-            <div id="main">
-                <h3>State Merit Scholarship</h3>
-                <p><b>Eligibility --</b> Class 11-12, UG, income = 1.5 lakh (Gen/OBC), 2 lakh (SC/ST)</p>
-                <p><b>Profits --</b> Tuition and academic fees</p>
                 <p><b>income --</b> undefined</p>
                 <a href="https://scholarship.up.gov.in/"><b>Apply now.</b></a>
             </div>
