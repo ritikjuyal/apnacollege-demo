@@ -1,17 +1,36 @@
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("body").css("font-family","Arial,Helvetica,sans-serif");
+                $("div").eq(0).css({"box-shadow":"0 2px 4px #000","display":"flex","justify-content":"space-between","padding":"20px"});
+                $("a").slice(0,2).css({"color":"rgb(100,100,100)","text-decoration":"none"});
+                $("h1").css("text-align","center");
+                $("div").eq(1).css({"display":"grid","align-items":"center","justify-content":"center","margin":"0 25%","padding":"10px","border-radius":"40px","background-color":"#0ff"});
+                $("label").css({"color":"#fff","margin":"10px 0"});
+                $("select").css({"background-color":"#fff","margin":"5px 0","padding":"10px","border":"1px solid #00f","border-radius":"40px"});
+                $("button").css({"text-align":"center","width":"250px","color":"#fff","background-color":"#f00","margin":"20px 20px 10px 35px","padding":"20px","border":"1px solid #f00","border-radius":"40px"});
+                $("button").on({
+                    mouseenter:function(){
+                        $(this).css("background-color","#0f0");
+                    },
+                    mouseleave:function(){
+                        $(this).css("background-color","#f00");
+                    }
+                });
+            });
+        </script>
         <title>Scholarship Finder</title>
         <!--Include the above in your head tag-->
     </head>
     <body>
-        <div class="header">
+        <div>
             <a href="homes.html"><b>Home</b></a>
             <a href="contact.html"><b>About Me</b></a>
         </div>
-            <h1 class="scholar">Scholarship Finder</h1>
-            <div class="form">
+            <h1>Scholarship Finder</h1>
+            <div>
                 <label for="abc">Education Level</label>
                 <select id="abc">
                     <option>Choose education level</option>
@@ -53,7 +72,7 @@
                         window.location.href="result.html";
                     }
                     else if(((a=="Class 11-12" || a=="UG" || a=="PG" || a=="Ph.D") && b=="=< 1 lakh") || ((a=="Class 9-10" || a=="Ph.D") && b=="=< 2.5 lakh") || (a=="Class 8" && b=="=< 2 lakh")){
-                        window.location.href="information1.html";
+                        window.location.href="informations.html";
                     }
                     else if(a=="Class 8" && b=="=< 2.5 lakh"){
                         window.location.href="information2.html";

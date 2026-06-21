@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Calculation usingAngularJS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <!--Include the above in your head tag-->
+    </head>
+    <body>
+        <div ng-app="" ng-init="a=123;b=34">
+            <p>Total number of items:</p>
+            <input type="number" ng-model="a">
+            <p>Items Sold:</p>
+            <input type="number" ng-model="b"> 
+            <p>Remaining items:</p>           
+            <input type="number" ng-model="a-b">            
+       </div>
+    </body>
+</html>
