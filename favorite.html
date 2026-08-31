@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+            img{
+                width: 250px;
+                height: 250px;
+            }
+        </style>
+        <title>VueJS Toggle Project</title>
+    </head>
+    <body>
+        <div id="app">
+            <img v-bind:src="b" v-on:click="d">
+            <div id="miny">
+                <h1>MINY</h1>
+                <button v-on:click="x($event,5)">+5</button>
+                <button v-on:click="x($event,1)">+1</button>
+                <button v-on:click="x($event,-5)">-5</button>
+            </div>
+            <div id="tsk">
+                <h1>TSK</h1>
+                <button v-on:click="x($event,5)">+5</button>
+                <button v-on:click="x($event,1)">+1</button>
+                <button v-on:click="x($event,-5)">-5</button>                
+            </div>
+            <div id="sfu">
+                <h1>SFU</h1>
+                <button v-on:click="x($event,5)">+5</button>
+                <button v-on:click="x($event,1)">+1</button>
+                <button v-on:click="x($event,-5)">-5</button>                
+            </div>
+            <ul>
+                <li>MINY:{{miny}}</li>
+                <li>TSK:{{tsk}}</li>
+                <li>SFU:{{sfu}}</li>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const a=Vue.createApp({
+                data(){
+                    return{
+                        a:0,
+                        b:'asg.jpg',
+                        c:['asg.jpg','asm.jpg','axz.png'],
+                        miny:0,
+                        tsk:0,
+                        sfu:0
+                    };
+                },
+                methods:{
+                    d(){
+                        this.a++;
+                        if(this.a>=3){
+                            this.a=0;
+                        }
+                        this.b=this.c[this.a];
+                    },
+                    x(d,n){
+                        if(d.target.parentElement.id=="miny"){
+                            this.miny+=n;
+                        }
+                        else if(d.target.parentElement.id=="tsk"){
+                            this.tsk+=n;
+                        }
+                        else{
+                            this.sfu+=n;
+                        }
+                    }
+                }
+            })
+            a.mount('#app');
+        </script>
+    </body>
+</html>

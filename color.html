@@ -1,10 +1,18 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="css/style.css">
-		<!--Include the above in your head tag-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("body").css("font-family","Arial,Helvetica,sans-serif");
+                $("div").css({"display":"grid","background-color":"#00f","text-align":"center","gap":"10px","padding":"10px"});
+                $("div").css("grid-template-columns","80px 50px 70px 50px");
+                $("h1").css({"background-color":"#fff","padding":"20px"});
+            });
+        </script>
+    <!--Include the above in your head tag-->
 	</head>
 	<body>
-		<div class="item-container">
+		<div>
 			<h1>1</h1>
 			<h1>2</h1>
 			<h1>3</h1>

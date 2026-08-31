@@ -1,8 +1,16 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="css/style.css">
-		<!--Include the above in your head tag-->
-	</head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("body").css("font-family","Arial,Helvetica,sans-serif");
+                $("div").css({"display":"grid","grid-template-areas":"'item item . . .' 'item item . . .'","background-color":"#00f","text-align":"center","gap":"10px","padding":"10px"});
+                $("h1").eq(0).css("grid-area","item");
+                $("h1").css({"background-color":"#fff","padding":"20px"});
+            });
+        </script>
+        <!--Include the above in your head tag-->
+    </head>
 	<body>
 		<div class="area">
 			<h1 class="one">1</h1>
