@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script></script>
+    </head>
+    <body>
+        <header>
+            <h1>Privacy Policy</h1>
+            <p>CricHub mobile application · Last updated: 2026-05-09</p>
+        </header>
+        <main>
+            <p>This Privacy Policy explains what data the <b>CricHub</b> mobile application (Android package com.crichub.online, "the App") collects, why it is collected, who we share it with, and the choices you have. CricHub is published by FXTX Online (<u>fxtx.online@gmail.com</u>).</p>
+            <p><b>In one paragraph.</b> CricHub stores match scores and profile information you create in the app (using Google Firebase). It uses Google AdMob to show ads and Google Analytics for Firebase to understand which features are used. Match-clip videos you record stay on your device unless you choose to upload them via Cloudinary. We do not sell your data, and we do not use it for any purpose beyond running the App.</p>
+            <h3>1. Information we collect</h3>
+            <h4>1.1 Account information</h4>
+            <p>When you sign up or sign in (Google sign-in, email/password, or as a guest) we collect:</p>
+            <ul>
+                <li>Display name and email address (when you sign in with Google or email).</li>
+                <li>A profile photo if you choose to upload one.</li>
+                <li>An anonymous Firebase Auth UID (created automatically for guest sign-in).</li>
+            </ul>
+            <h4>1.2 Match and team data you create</h4>
+            <p>Anything you enter while scoring or managing teams — team names, player names, ball-by-ball events, tournament details, fixtures, and notes you add. This data is stored in Google Firestore (and optionally in our Supabase Postgres mirror) so you can access it across devices.</p>
+            <h4>1.3 Camera, photos, and videos</h4>
+            <p>CricHub asks for the following media permissions, each tied directly to a specific user-initiated action:</p>
+            <ul>
+                <li><b>Camera —</b> only opened when you tap the in-app "Record clip" button while scoring a match. Used to record short cricket clips and capture photos of match action. The camera is never opened in the background.</li>
+                <li><b>Photos / Videos</b> (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO) — only used when you explicitly tap a picker, such as "Change team logo", "Change player profile photo", or "Select a match clip to share". On Android 13 and above, the app uses the system Photo Picker, so no broad media-library access is required.</li>
+                <li><b>Microphone</b> (RECORD_AUDIO) — only when you are recording a match clip, so the clip captures stadium sound.</li>
+            </ul>
+            <p>The app does not scan, index, or transmit any photo or video in the background. Nothing leaves your device unless you explicitly pick it through a system picker, after which it is uploaded via Cloudinary and attached to your match, team, or player record so it can be shared with people you allow.</p>
+            <h4>1.4 Device and usage data</h4>
+            <ul>
+                <li>Device model, OS version, app version, language, time zone (collected by Firebase).</li>
+                <li>Screen views and feature usage events (collected by Firebase Analytics).</li>
+                <li>Crash reports (collected by Firebase Crashlytics) including stack traces and a non-personal device fingerprint.</li>
+                <li>Android Advertising ID / Apple IDFA, only when you have allowed ad personalisation in your device settings.</li>
+            </ul>
+            <h4>1.5 Push notification tokens</h4>
+            <p>The Firebase Cloud Messaging (FCM) registration token assigned to your install — used to deliver match notifications and admin broadcasts. Not linked to your name.</p>
+        </main>
+    </body>
+</html>

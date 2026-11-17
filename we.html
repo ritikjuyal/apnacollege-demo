@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="ab" ng-controller="abcd">
+            <input type="text" ng-model="lg">
+            <h1>Your name:{{lg}}</h1>
+            <label>a:</label>
+            <input type="number" ng-model="a">
+            <label>b:</label>
+            <input type="number" ng-model="b">
+            <label>c:</label>
+            <input type="number" ng-model="c">
+            <label>d:</label>
+            <input type="number" ng-model="d">
+            <label>e:</label>
+            <input type="number" ng-model="e">
+            <label>f:</label>
+            <input type="number" ng-model="f">
+            <h1>a + b + c + d + e + f = {{a+b+c+d+e+f}}</h1>
+        </div>
+        <script>
+            var any=angular.module('ab',[]);
+            any.controller('abcd',function($scope){
+                $scope.lg='';
+                $scope.a=0;
+                $scope.b=0;
+                $scope.c=0;
+                $scope.d=0;
+                $scope.e=0;
+                $scope.f=0;
+            });
+        </script>
+    </body>
+</html>

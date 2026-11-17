@@ -1,0 +1,11 @@
+p{
+    color: #f00;
+}
+@mixin as{
+    border:4px dotted #00f;
+    padding: 10px;
+}
+p{
+    @include as;
+    background-color: #ff0;
+}
